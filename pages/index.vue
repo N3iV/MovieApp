@@ -37,6 +37,14 @@
           <span class="movie__title">
             {{ movie.title }}
           </span>
+          <div class="get-more">
+            <NuxtLink
+              class="button button-light"
+              :to="{ name: 'movies-movieid', params: { id: movie.id } }"
+            >
+              Get More Info
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -62,6 +70,14 @@
           <span class="movie__title">
             {{ movie.title }}
           </span>
+          <div class="get-more">
+            <NuxtLink
+              class="button button-light"
+              :to="{ name: 'movies-movieid', params: { id: movie.id } }"
+            >
+              Get More Info
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -125,7 +141,7 @@ h1 {
 .home {
   color: #fe843d;
   background: #080d26;
-  padding: 8rem 0;
+  padding-bottom: 8rem;
 }
 .movie {
   &__container {
@@ -169,8 +185,13 @@ h1 {
     align-items: center;
   }
   &__title {
-    font-size: 1.2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    font-size: 1.2rem;
     font-weight: 400;
   }
 }
@@ -180,5 +201,11 @@ h1 {
     padding: 0.8rem 1.4rem;
     border-radius: 0;
   }
+}
+.get-more {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

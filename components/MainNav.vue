@@ -3,9 +3,6 @@
     <div class="nav container">
       <h2 class="nav__logo">Movie hehe</h2>
       <ul class="nav__list">
-        <li>
-          <fa :icon="['fas', 'adjust']" />
-        </li>
         <li class="nav__item">Home</li>
         <li class="nav__item">Movies</li>
         <li class="nav__item">TV Series</li>
